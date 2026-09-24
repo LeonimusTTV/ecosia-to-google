@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Ecosia to Google",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redirects Ecosia search images to Google and web search if needed.",
   "icons": {
     "16": "icons/icon16.png",

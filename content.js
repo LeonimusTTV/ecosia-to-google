@@ -38,9 +38,7 @@ function ecosiaEdits() {
 
 function googleEdits() {
   const inputText = document.querySelector('[role="combobox"]').value;
-  editElementsByType("listitem", "role", (el) => {
-    el.children[0].href = `https://www.ecosia.com/search?q=${inputText}`
-  });
+  document.querySelectorAll('[role="listitem"]')[1].children[0].href = `https://www.ecosia.com/search?q=${inputText}`;
 }
 
 applyEdits();
