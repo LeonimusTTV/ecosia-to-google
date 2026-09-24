@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ecosia to Google</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="brand">
+        <img src="icons/icon128.png" alt class="logo" />
+        <h1>Ecosia <svg class="to" viewBox="0 0 16 16" aria-label="to"
+            role="img"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" /></svg>
+          Google</h1>
+      </header>
+
+      <p id="status-active" class="pill pill--active" role="status" hidden>
+        <svg class="leaf" viewBox="0 0 16 16" aria-hidden="true"><path
+            d="M13.5 2.5C6 2 2.5 5.5 2.5 9.5c0 1.2.4 2.2 1 3C4.700 8.700 8 6.700 11 6c-2.700 1.300-5 3.200-6.200 7.200.8.500 1.700.8 2.700.8 4 0 6.500-3.500 6-11.500Z" /></svg>
+        <span>Active on this tab</span>
+      </p>
+
+      <button id="status-idle" class="pill pill--idle" type="button" hidden>
+        <span>Open ecosia.org</span>
+        <svg class="go" viewBox="0 0 16 16" aria-hidden="true"><path
+            d="M3 13 13 3M5.500 3H13v7.500" /></svg>
+      </button>
+
+      <footer class="foot">
+        <span>Only runs on ecosia.org</span>
+        <span>v1.0.0</span>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

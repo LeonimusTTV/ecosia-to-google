@@ -1,0 +1,136 @@
+:root {
+  --field: #0e3b2c;
+  --field-deep: #0a2c21;
+  --milk: #f4f7ef;
+  --leaf: #2f8f4e;
+  --lime: #d4f27a;
+  --mute: #9ebfae;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 300px;
+  background: var(--field);
+  color: var(--milk);
+  font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.popup {
+  padding: 22px 20px 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.to {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--lime);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 52px;
+  margin: 0 0 18px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.pill[hidden] {
+  display: none;
+}
+
+.pill--active {
+  background: var(--milk);
+  color: var(--field);
+}
+
+.leaf {
+  width: 18px;
+  height: 18px;
+  fill: var(--leaf);
+  flex-shrink: 0;
+}
+
+.pill--idle {
+  justify-content: space-between;
+  background: transparent;
+  color: var(--milk);
+  border: 1.5px solid var(--mute);
+  cursor: pointer;
+  transition: background-color 180ms var(--ease), border-color 180ms var(--ease),
+    color 180ms var(--ease);
+}
+
+.pill--idle:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: var(--field-deep);
+}
+
+.pill--idle:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+.go {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 180ms var(--ease);
+}
+
+.pill--idle:hover .go {
+  transform: translate(2px, -2px);
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: var(--mute);
+}
