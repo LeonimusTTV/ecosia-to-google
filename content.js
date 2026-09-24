@@ -12,7 +12,10 @@ function htmlToElement(html) {
 }
 
 function applyEdits() {
-  if (window.location.hostname === "www.ecosia.org") {
+  const hostname = window.location.hostname;
+  if (hostname === null || hostname === undefined) return;
+
+  if (hostname === "www.ecosia.org") {
     ecosiaEdits();
   } else {
     googleEdits();
@@ -38,7 +41,12 @@ function ecosiaEdits() {
 
 function googleEdits() {
   const inputText = document.querySelector('[role="combobox"]').value;
-  document.querySelectorAll('[role="listitem"]')[1].children[0].href = `https://www.ecosia.com/search?q=${inputText}`;
+  const menu = document.querySelectorAll('[role="listitem"]');
+
+  // edit the second list item which is the normal web search to point to Ecosia
+  if (menu.length > 1) {
+    menu[1].children[0].href = `https://www.ecosia.com/search?q=${inputText}`;
+  }
 }
 
 applyEdits();

@@ -22,6 +22,11 @@
     "activeTab",
     "scripting"
   ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{bf687cf6-6772-4853-8a1d-eb78132e073f}"
+    }
+  },
   "content_scripts": [
     {
       "matches": [
