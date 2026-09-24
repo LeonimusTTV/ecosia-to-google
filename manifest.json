@@ -25,7 +25,8 @@
   "content_scripts": [
     {
       "matches": [
-        "*://www.ecosia.org/*"
+        "*://www.ecosia.org/*",
+        "*://www.google.com/*"
       ],
       "js": [
         "content.js"
