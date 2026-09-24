@@ -102,6 +102,28 @@ h1 {
     color 180ms var(--ease);
 }
 
+.pill--back {
+  background: var(--milk);
+  color: var(--field);
+  border: 1.5px solid var(--milk);
+  cursor: pointer;
+  transition: background-color 180ms var(--ease), border-color 180ms var(--ease);
+}
+
+.pill--back:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+}
+
+.pill--back:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+.pill--back:hover .go--back {
+  transform: translate(-2px, -2px);
+}
+
 .pill--idle:hover {
   background: var(--lime);
   border-color: var(--lime);

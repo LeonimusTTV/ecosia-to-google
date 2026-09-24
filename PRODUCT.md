@@ -16,11 +16,11 @@ A Chrome (Manifest V3) extension that keeps Ecosia as the default and gives a on
 Keep Ecosia, escape to Google. It is an escape hatch on top of Ecosia, not a replacement search engine and not an Ecosia reskin.
 
 ## Operating Context
-Runs only on `https://www.ecosia.org/*`. A content script (content.js) adds a "Go to Google" item to Ecosia's search navigation, rewrites the Images tab link to Google Images (`udm=2`), and renames "Ecosia" to "Google" in result titles. The toolbar popup only reports whether the current tab is an Ecosia page.
+Runs on `https://www.ecosia.org/*` and `https://www.google.com/*`. On Ecosia, a content script (content.js) adds a "Go to Google" item to Ecosia's search navigation, rewrites the Images tab link to Google Images (`udm=2`), and renames "Ecosia" to "Google" in result titles. The toolbar popup reports status on Ecosia tabs, and on Google tabs offers "Back to Ecosia" with the same query.
 
 ## Capabilities and Constraints
 - Plain static HTML/CSS/JS, no build step, no framework; loaded unpacked.
-- Permissions: `activeTab`, `scripting`; content script matches ecosia.org only.
+- Permissions: `activeTab`, `scripting`; content scripts match ecosia.org and google.com only.
 - The popup stays tiny (about 300px wide): status at a glance, no settings.
 - Current popup copy: "Active on this tab" / "Inactive — open ecosia.org"; three behaviours listed (image searches open in Google, web searches fall back to Google, result branding reads "Google").
 - Undecided: publishing to the Chrome Web Store.
