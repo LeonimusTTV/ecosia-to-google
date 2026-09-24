@@ -26,10 +26,6 @@ function applyEdits() {
   editElementsByTestId("search-navigation-item-images", (el) => {
     el.children[0].href = `https://www.google.com/search?q=${inputText}&sclient=img&udm=2`
   })
-
-  editElementsByClass("result-title", (el) => {
-    el.textContent = el.textContent.replace("Ecosia", "Google");
-  });
 }
 
 applyEdits();
