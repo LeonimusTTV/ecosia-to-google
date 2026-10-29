@@ -1,0 +1,1 @@
+xcrun safari-web-extension-converter ./ --project-location ./safari-extension --app-name "Ecosia to Google" --bundle-identifier com.leonimust.ecosia-to-google --no-open
