@@ -2,6 +2,9 @@ const activeEl = document.getElementById("status-active");
 const backEl = document.getElementById("status-back");
 const idleEl = document.getElementById("status-idle");
 
+document.getElementById("version").textContent =
+  `v${chrome.runtime.getManifest().version}`;
+
 let googleQuery = "";
 
 idleEl.addEventListener("click", () => {
